@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okl Digital Agency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* header */
+        header {
+            background: #016b9f;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        header nav{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header .menu{
+            display: none;
+        }
+        header .close{
+            content: "XX";
+        }
+
+        header nav .mainmenu{
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding-bottom: 5px;
+        }
+
+        header nav a:hover, header nav a:focus {
+            border-bottom: 2px solid #fff;
+        }
+
+        header .button {
+            background: #e2df0d;
+            border: none;
+            color: #333;
+            padding: 15px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        header .button:hover {
+            background: #b4e20d;
+            transform: scale(98%);
+        }
+
+        /* hero section */
+        .hero {
+            background: #0077cc;
+            color: white;
+            padding: 160px 60px;
+            text-align: left;
+            border-color: rgb(0, 119, 204);
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0.6)), url(https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=600);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .hero .content{
+            display: inline-block;
+            margin-right: 40px;
+            margin-right: 120px;
+            vertical-align: middle;
+            margin-top: 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            max-width: 480px;
+            line-height: 1.2;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 0px;
+            text-transform: uppercase;
+            color:#e2df0d;
+            letter-spacing: 1px;
+            word-spacing: 5px;
+        }
+
+        .hero .button {
+            background: rgb(1, 81, 138);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .hero .button:hover {
+            background: rgb(1, 62, 106);
+            transform: scale(99%);
+        }
+
+        .hero .sidepanel{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        .hero .item{
+            border: 2px solid #fff;
+            border-radius: 8px;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            font-size: 21px;
+            vertical-align: middle;
+        }
+        .hero svg{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* services section */
+        .services {
+            padding: 160px 20px;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        .services h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .services .service {
+            display: inline-block;
+            width: 21%;
+            padding: 20px;
+            margin: 0 20px;
+            background: white;
+            box-shadow: 0px 0px 20px 4px rgba(0, 119, 204, 0.1);
+            border-radius: 8px;
+        }
+
+        .services .service h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .services .service p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Why choose us section */
+        .why-choose {
+            padding: 60px 20px;
+            text-align: center;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 640px;
+        }
+
+        .why-choose h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .why-choose p {
+            font-size: 18px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .why-choose ul{
+            margin: 0;
+            padding: 0;
+        }
+
+        .why-choose li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: left;
+            margin-left: 15px;
+        }
+
+        /* Sample projects section */
+        .sample-works {
+            padding: 160px 20px;
+            /* background: #f4f4f4; */
+            background: #01365d;
+            text-align: center;
+            color: #fff;
+        }
+
+        .sample-works h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .sample-works p {
+            width: 92%;
+            font-size: 18px;
+            margin: 10px auto;
+            text-align: left;
+        }
+ 
+        .sample-image{
+            display: inline-block;
+            width: 30%;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .sample-works img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            background: #00aaff;
+            min-height: 250px;
+        }
+
+        .sample-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            font-size: 21px;
+            font-weight: 700;
+            text-align: left;
+            color: #e2df0d;
+            padding: 10px 20px;
+            margin: 0;
+            border-radius: 8px 0 0 0;
+        }
+
+        /* Testimonials section */
+        .testimonials {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial {
+            background: #333;
+            color: white;
+            padding: 40px 40px 20px;
+            margin: 0 auto 20px;
+            max-width: 600px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .testimonial p {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        .testimonial h4 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .img-container{
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: inline-block; 
+            position: relative; 
+            box-shadow: 0 4px 12px rgba(126, 126, 126, 0.4);
+            /* display: block; */
+            margin-bottom: 0;
+        }
+        .img-container img{
+            width: auto; 
+            height: 100%;  
+            margin-left: -50px;/* landscape imgs */
+        }
+
+        /* Achievements/ stats section */
+        .stats {
+            padding: 60px 20px;
+            text-align: center;
+            background: #0077cc;
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0.6));
+            color: white;
+        }
+
+        .stats h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .stats p {
+            font-size: 18px;
+            margin: 0 auto;
+            max-width: 720px;
+        }
+
+        .stats .stat {
+            display: inline-block;
+            width: 30%;
+            padding: 0 20px 20px;
+        }
+
+        .stats .stat h3 {
+            font-size: 48px;
+            margin-bottom: 0px;
+        }
+
+        .stats .stat p {
+            margin-top: 0;
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        /* Contact section  */
+        .contact {
+            padding: 60px 20px;
+            text-align: left;
+            width: 88%;
+            margin: 0 auto;
+        }
+
+        .contact .contact-image{
+            display: inline-block;
+            width: 40%;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        .contact .contact-form{
+            display: inline-block;
+            width: 52%;
+            vertical-align: middle;
+        }
+
+        .contact img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .contact p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            margin-top: 0;
+            text-align: left;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .contact form button {
+            background: #0077cc;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Generic */
+        .highlight{
+            font-weight: 900;
+        }
+        .flex{
+            display: flex;
+        }
+        .inline-block{
+            display: inline-block;
+        }
+
+        /* Responsive Design - upto medium screens */
+        @media (max-width: 768px) {
+            header .container {
+                /* flex-direction: column; */
+                align-items: flex-start;
+            }
+
+            header .menu{
+                display: block;
+            }
+
+            header nav .mainmenu{
+                /* move outside visible area */
+                position: fixed;
+                left: -200%;
+                top: 80px;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 10px;
+                background-color: #01365d;
+                width: 100%;
+                padding-bottom: 20px;
+            }
+
+            header nav a {
+                margin: 10px 0;
+                padding: 0;
+            }
+            header nav a:hover, header nav a:focus {
+                border-bottom: none;
+            }
+
+            /* responsive nav mainmenu - bring back to visible area */
+            header nav .resp{
+                /* display: none; */
+                left: 0%;
+            }
+
+            .hero, .sample-works {
+                padding: 40px 10px;
+            }
+            .hero .button{
+                margin-bottom: 10px;
+            }
+
+            .services .service, .stats .stat, .hero .content, .hero .sidepanel, .sample-works .sample-image, .contact .contact-image, .contact .contact-form {
+                width: 80%;
+                margin: 20px 0;
+            }
+
+            .hero .sidepanel {
+                margin: 0;
+            }
+
+            .testimonial, .sample-works .sample-image {
+                width: 80%;
+            }
+
+            .services {
+            padding: 60px 20px;
+            }
+
+            .stats .stat h3 {
+                font-size: 36px;
+            }
+        }
+
+        /* Mobile / small screens */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .hero a {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+            .hero .button{
+                margin-bottom: 10px;
+            }
+
+            .services .service, .stats .stat {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .why-choose p, .testimonial, .sample-works img {
+                width: 100%;
+            }
+
+            .contact h2 {
+                font-size: 28px;
+            }
+
+            .contact p {
+                font-size: 16px;
+            }
+
+            .stats .stat h3 {
+                font-size: 28px;
+            }
+        }
+
+        /**** Footer section *****/
+        footer {
+            background: #333; 
+            color: white; 
+            padding: 40px 20px;
+            text-align: left;
+        }
+
+        footer .container {
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        /* Footer Top Section */
+        .footer-top {
+            display: flex; 
+            justify-content: space-between; 
+            flex-wrap: wrap; 
+            margin-bottom: 40px;
+        }
+
+        .footer-top div {
+            flex: 1;
+            padding: 20px 60px 20px 0; 
+            min-width: 250px; 
+        }
+
+        .footer-top h3, .footer-top h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .footer-top p {
+            font-size: 16px;
+            margin-bottom: 5px;
+            margin-top: 0;
+            line-height: 1.5;
+        }
+
+        /* General Links Section */
+        .footer-links ul {
+            list-style-type: none; 
+            padding: 0;
+            margin-top: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px; 
+        }
+
+        .footer-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .footer-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Info Section */
+        .footer-contact a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Bottom: Social Links */
+        .footer-bottom {
+            margin-bottom: 20px;
+        }
+
+        .footer-bottom h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+
+        /* Footer Copyright */
+        .footer-copyright {
+            border-top: 1px solid #444; 
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive Styles for Footer */
+        @media (max-width: 768px) {
+            .footer-top {
+                flex-direction: column; /* Stack sections vertically on smaller screens */
+            }
+
+            .footer-top div {
+                margin-bottom: 20px;
+            }
+
+            .social-links a {
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            footer {
+                padding: 30px 10px;
+            }
+
+            footer .container {
+                padding: 0 10px;
+            }
+
+            .footer-top div {
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Top Section with Logo and Navigation -->
+    <header>
+        <div class="container">
+            <span class="logo">OKL</span>
+            <nav>
+                <span class="menu"><!-- svg code from https://boxicons.com --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"></path></svg></span>
+                <div class="mainmenu">
+                    <a href="#services">Services</a>
+                    <a href="#why-choose">About Us</a>
+                    <a href="#sample-works">Resources</a>
+                    <a href="#contact">Contact</a>
+                    <button class="button">Get a Quote</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="content">
+            <p>Trusted Digital Agency</p>
+            <h1>Your Digital Partner to make conversions</h1>
+            <!-- <a href="#contact" class="button">Lets Get Started</a> -->
+            <button class="button">Lets Get Started</button>
+        </div>
+        <div class="sidepanel">
+            <div class="item">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M19.965 8.521C19.988 8.347 20 8.173 20 8c0-2.379-2.143-4.288-4.521-3.965C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.035C6.138 3.712 4 5.621 4 8c0 .173.012.347.035.521C2.802 9.215 2 10.535 2 12s.802 2.785 2.035 3.479A3.976 3.976 0 0 0 4 16c0 2.379 2.138 4.283 4.521 3.965C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.035C17.857 20.283 20 18.379 20 16c0-.173-.012-.347-.035-.521C21.198 14.785 22 13.465 22 12s-.802-2.785-2.035-3.479zm-9.01 7.895-3.667-3.714 1.424-1.404 2.257 2.286 4.327-4.294 1.408 1.42-5.749 5.706z"></path></svg>
+                Drive Conversions
+            </div>
+            <div class="item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M19.965 8.521C19.988 8.347 20 8.173 20 8c0-2.379-2.143-4.288-4.521-3.965C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.035C6.138 3.712 4 5.621 4 8c0 .173.012.347.035.521C2.802 9.215 2 10.535 2 12s.802 2.785 2.035 3.479A3.976 3.976 0 0 0 4 16c0 2.379 2.138 4.283 4.521 3.965C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.035C17.857 20.283 20 18.379 20 16c0-.173-.012-.347-.035-.521C21.198 14.785 22 13.465 22 12s-.802-2.785-2.035-3.479zm-9.01 7.895-3.667-3.714 1.424-1.404 2.257 2.286 4.327-4.294 1.408 1.42-5.749 5.706z"></path></svg>
+                Generate Growth
+            </div>
+            <div class="item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M19.965 8.521C19.988 8.347 20 8.173 20 8c0-2.379-2.143-4.288-4.521-3.965C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.035C6.138 3.712 4 5.621 4 8c0 .173.012.347.035.521C2.802 9.215 2 10.535 2 12s.802 2.785 2.035 3.479A3.976 3.976 0 0 0 4 16c0 2.379 2.138 4.283 4.521 3.965C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.035C17.857 20.283 20 18.379 20 16c0-.173-.012-.347-.035-.521C21.198 14.785 22 13.465 22 12s-.802-2.785-2.035-3.479zm-9.01 7.895-3.667-3.714 1.424-1.404 2.257 2.286 4.327-4.294 1.408 1.42-5.749 5.706z"></path></svg>
+                Brand Engagement
+            </div>
+        </div>
+        <div class="sidepanel">
+            <div class="item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M19.965 8.521C19.988 8.347 20 8.173 20 8c0-2.379-2.143-4.288-4.521-3.965C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.035C6.138 3.712 4 5.621 4 8c0 .173.012.347.035.521C2.802 9.215 2 10.535 2 12s.802 2.785 2.035 3.479A3.976 3.976 0 0 0 4 16c0 2.379 2.138 4.283 4.521 3.965C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.035C17.857 20.283 20 18.379 20 16c0-.173-.012-.347-.035-.521C21.198 14.785 22 13.465 22 12s-.802-2.785-2.035-3.479zm-9.01 7.895-3.667-3.714 1.424-1.404 2.257 2.286 4.327-4.294 1.408 1.42-5.749 5.706z"></path></svg>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="m20.496 6.106-7.973-4a.997.997 0 0 0-.895-.002l-8.027 4c-.297.15-.502.437-.544.767-.013.097-1.145 9.741 8.541 15.008a.995.995 0 0 0 .969-.009c9.307-5.259 8.514-14.573 8.476-14.967a1 1 0 0 0-.547-.797z"></path></svg> -->
+                Nurture Leads
+            </div>
+            <div class="item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)"><path d="M19.965 8.521C19.988 8.347 20 8.173 20 8c0-2.379-2.143-4.288-4.521-3.965C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.035C6.138 3.712 4 5.621 4 8c0 .173.012.347.035.521C2.802 9.215 2 10.535 2 12s.802 2.785 2.035 3.479A3.976 3.976 0 0 0 4 16c0 2.379 2.138 4.283 4.521 3.965C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.035C17.857 20.283 20 18.379 20 16c0-.173-.012-.347-.035-.521C21.198 14.785 22 13.465 22 12s-.802-2.785-2.035-3.479zm-9.01 7.895-3.667-3.714 1.424-1.404 2.257 2.286 4.327-4.294 1.408 1.42-5.749 5.706z"></path></svg>
+                Search Engine Optimisation
+            </div>
+            <div class="item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M19.965 8.521C19.988 8.347 20 8.173 20 8c0-2.379-2.143-4.288-4.521-3.965C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.035C6.138 3.712 4 5.621 4 8c0 .173.012.347.035.521C2.802 9.215 2 10.535 2 12s.802 2.785 2.035 3.479A3.976 3.976 0 0 0 4 16c0 2.379 2.138 4.283 4.521 3.965C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.035C17.857 20.283 20 18.379 20 16c0-.173-.012-.347-.035-.521C21.198 14.785 22 13.465 22 12s-.802-2.785-2.035-3.479zm-9.01 7.895-3.667-3.714 1.424-1.404 2.257 2.286 4.327-4.294 1.408 1.42-5.749 5.706z"></path></svg>
+                Fast Performance
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>How We Can Help Your Business</h2>
+        <div class="service">
+            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V7h16l.002 12H4z"></path><path d="M9.293 9.293 5.586 13l3.707 3.707 1.414-1.414L8.414 13l2.293-2.293zm5.414 0-1.414 1.414L15.586 13l-2.293 2.293 1.414 1.414L18.414 13z"></path></svg>
+            <h3>Website Creation</h3>
+            <p>Your website is the face of your business online, and we’re here to make it shine.</p>
+        </div>
+        <div class="service">
+            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M13 6h2v11h-2zm4-3h2v14h-2zM9 9h2v8H9zM4 19h16v2H4zm1-7h2v5H5z"></path></svg>
+            <h3>SEO</h3>
+            <p>Our SEO experts use the latest techniques to help your business rank higher in search results.</p>
+        </div>
+        <div class="service">
+            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M19.875 3H4.125C2.953 3 2 3.897 2 5v14c0 1.103.953 2 2.125 2h15.75C21.047 21 22 20.103 22 19V5c0-1.103-.953-2-2.125-2zm0 16H4.125c-.057 0-.096-.016-.113-.016-.007 0-.011.002-.012.008L3.988 5.046c.007-.01.052-.046.137-.046h15.75c.079.001.122.028.125.008l.012 13.946c-.007.01-.052.046-.137.046z"></path><path d="M6 7h6v6H6zm7 8H6v2h12v-2h-4zm1-4h4v2h-4zm0-4h4v2h-4z"></path></svg>
+            <h3>Social Media Management</h3>
+            <p>We’ll handle your social media presence with care, helping you connect with your audience.</p>
+        </div>
+    </section>
+
+    <!-- Why Choose Okl Section -->
+    <section id="why-choose" class="why-choose">
+        <h2>Why Choose Okl?</h2>
+        <p>We are a local agency that understands your community and business needs. We are not just service providers; we’re your digital neighbors. Tech can be overwhelming, but it doesn’t have to be. We speak your language and make the process smooth and stress-free.</p>
+        <ul>
+            <li>
+                <strong>Build A Strong Online Presence</strong>: 
+                Strong and professional online presence positions a business as a leader in respective industry. We have successfully guided numerous clients in building their online authority and are ready to help you achieve the same.</li>
+            <li>
+                <strong>Boost Conversion Rates With User-Centric Design</strong>: 
+                An experienced website designing team works on building and optimizing website for an exceptional user experience, transforming visitors into loyal customers. We ensure your site is designed to engage and convert and help you get higher conversion rates.
+            </li>
+            <li>
+                <strong>Optimise For Search Engines</strong>: 
+                By implementing best practices and SEO strategies, your website can enhance search engine ranking and drive organic traffic and hereby help you increase your customer base. 
+            </li>
+            <li>
+                <strong>Improve Your Load Times And Retain More Visitors</strong>: 
+                By optimising your website’s load times, we help ensure fast performance that keeps visitors engaged and stay on website and help boost your conversion rates.
+            </li>
+        </ul>
+    </section>
+
+    <!-- Sample Works Section -->
+    <section id="sample-works" class="sample-works">
+        <h2>Our Recent Projects</h2>
+        <div class="sample-image">
+            <img src="https://images.unsplash.com/photo-1635405074683-96d6921a2a68?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" alt="Sample Work 1">
+            <h3 class="sample-title">Organic growth</h3>
+            <p>A more user-friendly and SEO optimized website to grow conversions.</p>
+        </div>
+        <div class="sample-image">
+            <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" alt="Sample Work 2">
+            <h3 class="sample-title">Better user experience and optimised performance</h3>
+            <p>A complete redesign and updated workflow to grow engagement.</p>
+        </div>
+        <div class="sample-image">
+                <img src="https://images.unsplash.com/photo-1569323112685-9c1410e5a0fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" alt="Sample Work 3">
+                <h3 class="sample-title">Reaching the right audience</h3>
+                <p>A targeted ad campaign across search  engines and social platforms to grow conversions.</p>
+            </div>
+        </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1573496527892-904f897eb744?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvcnBvcmF0ZSUyMHdvbWFufGVufDB8fDB8fHwy" alt="">
+            </div>
+            <p>"Okl completely transformed our website. It's beautiful, functional, and user-friendly. Their team is the best!"</p>
+            <h4>- Sarah J., Local Business Owner</h4>
+        </div>
+        <div class="testimonial">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGNvcnBvcmF0ZSUyMHdvbWFufGVufDB8fDB8fHwy" alt="">
+            </div>
+            <p>"The SEO services from Okl really boosted our visibility. We're seeing more traffic and leads thanks to them."</p>
+            <h4>- Mile P., Restaurant Manager</h4>
+        </div>
+        <div class="testimonial">
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1610387785204-6daf4e50e2ed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvcnBvcmF0ZSUyMHdvbWFufGVufDB8fDB8fHwy" alt="">
+            </div>
+            <p>"Our social media presence is stronger than ever, thanks to Okl. They're creative, timely, and effective!"</p>
+            <h4>- Linda W., Entrepreneur</h4>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats">
+        <h2>Our Achievements</h2>
+        <p>We have been providing a wide range of digital marketing services to clients of different industries since 2012. Turn your digital challenges into opportunities.</p>
+        <div class="stat">
+            <h3>150+</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat">
+            <h3>20</h3>
+            <p>Ongoing Projects</p>
+        </div>
+        <div class="stat">
+            <h3>10+</h3>
+            <p>Years in Business</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+        <div class="contact-image">
+            <p>We're ready to bring your ideas to life. <br><span class="highlight">Contact us</span> for a free consultation today!</p>
+            <img src="https://plus.unsplash.com/premium_photo-1675842663249-a8b70103dbaa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <!-- Brand Info and Navigation, contact info -->
+        <div class="footer-top">
+            <!-- Brand Info -->
+            <div class="footer-brand">
+                <h3>Okl Digital Agency</h3>
+                <p>Your trusted local partner for all your digital needs. We specialize in website creation, SEO, and social media management, helping you connect with your audience and grow your business.</p>
+            </div>
+
+            <!-- General Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-choose">About Us</a></li>
+                    <li><a href="#sample-works">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@okldigital.com">info@okldigital.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <p>Address: 1234 Main Street, Okl City</p>
+            </div>
+        </div>
+
+        <!-- Bottom: Social Media Links -->
+        <div class="footer-bottom">
+            <div class="social-links">
+                <h4>Follow Us</h4>
+                <a href="https://facebook.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path></svg><!-- <img src="facebook-icon.png" alt="Facebook" style="width: 24px; margin-right: 10px;"> --></a>
+                <a href="https://twitter.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg><!-- <img src="twitter-icon.png" alt="Twitter" style="width: 24px; margin-right: 10px;"> --></a>
+                <a href="https://instagram.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg><!-- <img src="instagram-icon.png" alt="Instagram" style="width: 24px; margin-right: 10px;"> --></a>
+                <a href="https://linkedin.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><circle cx="4.983" cy="5.009" r="2.188"></circle><path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path></svg><!-- <img src="linkedin-icon.png" alt="LinkedIn" style="width: 24px;"> --></a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <p>&copy; 2024 Okl Digital Agency. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+    // ***** Display top navigation - mobile screen menu
+    const menu = document.querySelector(".menu");
+    menu.addEventListener("click", function () {
+        const menunav = document.querySelector(".mainmenu");
+        if(menu.classList.contains("close")){
+            menunav.classList.remove("resp");
+            menu.classList.remove("close");
+        }
+        else{
+            menunav.classList.add("resp");
+            menu.classList.add("close");
+        }
+    })
+</script>
+</html>
